@@ -1,0 +1,108 @@
+form {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 33px 40px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  
+  label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 26px;
+    color: #114B5F;
+  }
+  
+  form > div > input {
+    border-color: #7698B3;
+    outline-color: #7698B3;
+    border-width: 1px;
+    border-radius: 26px;
+    box-shadow: 0px 5px 50px rgba(118, 152, 179, .25);
+    color: #7698B3;
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+    height: 20px;
+    width: calc(100%-50px);
+    font-family: 'Poppins';
+  }
+  select {
+    border-color: #7698B3;
+    outline-color: #7698B3;
+    border-width: 1px;
+    border-radius: 26px;
+    box-shadow: 0px 5px 50px rgba(118, 152, 179, .25);
+    color: #7698B3;
+    font-size: 23px;
+    text-align: center;
+    padding: 6px;
+    height: 46px;
+    width: 278px;
+    font-family: 'Poppins';
+    color: #114B5F;
+  }
+  form > div > input::placeholder {
+  color: rgba(118, 152, 179, .5);
+  font-family: 'Poppins';
+  font-weight: 400;
+  }
+  
+  form > div > input:focus {
+    outline-color: #114B5F;
+    border-radius: 26px;
+  }
+  
+  .MovieForm-buttonContainer {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .MovieForm-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    color: #202329;
+    font-weight: 400;
+    width: 120px;
+    height: 48px;
+    border-radius: 26px;
+    font-family: 'Poppins';
+  }
+  
+  .MovieForm-button-add {
+    background-color: #114B5F;
+    color: white;
+    border: none;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  }
+  
+  .MovieForm-button-cancel {
+    background: transparent;
+    border-color: #114B5F;
+    border-width: 1px;
+  }
+  .MovieForm-button-cancel:hover {
+    background-color: #114B5F;
+    color: white;
+    border: none;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  }
+
+  .input-text {
+    color: #7698B3;
+  }
+  .label-container {
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }

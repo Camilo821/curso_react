@@ -1,7 +1,7 @@
-.TodoSearch {
+.MovieSearch {
     background: #F9FBFC;
     border-radius: 2px;
-    border: 2px solid #202329;
+    border: 2px solid #7B435B;
     margin: 0 24px;
     height: 64px;
     width: calc(100% - 62px);
@@ -14,12 +14,13 @@
     border-radius: 50px;
   }
   
-  .TodoSearch::placeholder {
-    color: #A5A5A5;
+  .MovieSearch::placeholder {
+    color: #7B435B;
     font-family: 'Poppins';
     font-weight: 400;
+    opacity: 50%;
   }
   
-  .TodoSearch:focus {
-    outline-color: #61DAFA;
+  .MovieSearch:focus {
+    outline-color: #410B13;
   }

@@ -1,37 +1,39 @@
 import React from 'react';
-import { TodoCounter } from '../TodoCounter';
-import { TodoList } from '../TodoList';
-import { TodoItem } from '../TodoItem';
-import { TodoSearch } from '../TodoSearch';
-import { CreateTodoButton } from '../CreateTodoButton';
-import { TodoForm } from '../TodoForm'
-import { TodoContext } from '../TodoContext';
+import { MovieList } from '../MovieList';
+import { MovieItem } from '../MovieItem';
+import { MovieSearch } from '../MovieSearch';
+import { CreateMovieButton } from '../CreateMovieButton';
+import { MovieForm } from '../MovieForm'
+import { MovieContext } from '../MovieContext';
 import { Modal } from '../Modal'
+import { ViewedFilter } from '../ViewedFilter'
 import './App.css'
 function AppUI(){
-  const {error, loading, searchedTodos, completeTodos, deleteTodo, openModal, setOpenModal} = React.useContext(TodoContext)
+  const {error, loading, searchedMovies, completeMovies, deleteMovie, openModal, setOpenModal} = React.useContext(MovieContext)
   return(
     <React.Fragment>
-      <TodoCounter/>
-      <TodoSearch/>
-      <TodoList >
+      <MovieSearch/>
+      <ViewedFilter></ViewedFilter>
+      <MovieList >
         {error && <p className='info'>Desesperate, hubo un error :(</p>}
         {loading && <p className='info'>Estamos cargando, no desesperes</p>}
-        {(!loading && !searchedTodos.length) && <p className='info'>Crea tu primer TODO</p>}
-        {searchedTodos.map(todo => (
-          <TodoItem 
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodos(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}/>
+        {(!loading && !searchedMovies.length) && <p className='info'>Crea tu primer Movie</p>}
+        {searchedMovies.map(Movie => (
+          <MovieItem 
+            key={Movie.text}
+            text={Movie.text}
+            type={Movie.type}
+            productor={Movie.productor}
+            completed={Movie.completed}
+            onComplete={() => completeMovies(Movie.text)}
+            onDelete={() => deleteMovie(Movie.text)}/>
         ))}
-      </TodoList>
+      </MovieList>
       {!!openModal && (
       <Modal>
-        <TodoForm></TodoForm>
+        <MovieForm></MovieForm>
       </Modal>)}
-      <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal}/>
+      <CreateMovieButton setOpenModal={setOpenModal} openModal={openModal}/>
     </React.Fragment>);
 }
 
