@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import './MovieList.css'
 function MovieList(props){
     return(
@@ -9,5 +9,4 @@ function MovieList(props){
         </section>
     )
 }
-
 export { MovieList };

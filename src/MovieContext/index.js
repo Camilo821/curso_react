@@ -42,7 +42,7 @@ function MovieProvider(props){
         newMovies[MovieIndex].completed = !newMovies[MovieIndex].completed
         //Swal.fire('Buen Trabajo', 'Has completado el Movie ' + text, 'success')
         if (newMovies[MovieIndex].completed){
-          Swal.fire('Buen Trabajo', 'Has completado el Movie ' + text, 'success')
+          Swal.fire('Buen Trabajo', 'Has visto ' + text, 'success')
         }
         saveMovies(newMovies);
       }
@@ -52,16 +52,18 @@ function MovieProvider(props){
         newMovies.splice(MovieIndex, 1);
         saveMovies(newMovies);
       }
-      const addMovie = (text, type, productor) => {
+      const addMovie = (text, type, productor, link) => {
         const newMovies = [...Movies];
         newMovies.push({
           completed: false,
           text: text,
           type: type,
-          productor: productor
+          productor: productor,
+          link: link
         })
         saveMovies(newMovies);
       }
+      console.log(Movies)
     return(
         <MovieContext.Provider value={{
             activePage,

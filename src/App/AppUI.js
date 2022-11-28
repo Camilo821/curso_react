@@ -15,14 +15,15 @@ function AppUI(){
       <MovieSearch/>
       <ViewedFilter></ViewedFilter>
       <MovieList >
-        {error && <p className='info'>Desesperate, hubo un error :(</p>}
+        {/*{error && <p className='info'>Desesperate, hubo un error :(</p>}
         {loading && <p className='info'>Estamos cargando, no desesperes</p>}
-        {(!loading && !searchedMovies.length) && <p className='info'>Crea tu primer Movie</p>}
+        {(!loading && !searchedMovies.length) && <p className='info'>Crea tu primer Movie</p>}*/}
         {searchedMovies.map(Movie => (
           <MovieItem 
             key={Movie.text}
             text={Movie.text}
             type={Movie.type}
+            link={Movie.link}
             productor={Movie.productor}
             completed={Movie.completed}
             onComplete={() => completeMovies(Movie.text)}

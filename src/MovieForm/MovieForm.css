@@ -1,6 +1,6 @@
 form {
     width: 90%;
-    max-width: 500px;
+    max-width: 550px;
     background-color: #fff;
     padding: 33px 40px;
     display: flex;
@@ -31,6 +31,39 @@ form {
     width: calc(100%-50px);
     font-family: 'Poppins';
   }
+  
+  @media only screen and (max-width: 510px) {
+    form > div > input{
+      width: 200px;
+      height: 12px;
+    }
+    select, option {
+      height: 40px;
+      width: 250px;
+    }
+    .label-container {
+      font-size: 12px;
+    }
+    .title-input{
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    form > div > input{
+      width: 100px;
+      height: 12px;
+    }
+    select {
+      height: 40px;
+      width: 250px;
+    }
+    .label-container {
+      font-size: 12px;
+    }
+    .title-input{
+      width: 200px;
+    }
+  }
   select {
     border-color: #7698B3;
     outline-color: #7698B3;
@@ -41,7 +74,7 @@ form {
     font-size: 23px;
     text-align: center;
     padding: 6px;
-    height: 46px;
+    height: 42px;
     width: 278px;
     font-family: 'Poppins';
     color: #114B5F;

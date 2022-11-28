@@ -5,6 +5,7 @@ function MovieForm(){
     const [newMovieValue, setNewMovieValue] = React.useState('');
     const [newProductorValue, setNewProductorValue] = React.useState('');
     const [newTypeValue, setNewTypeValue] = React.useState('')
+    const [newLinkValue, setNewLinkValue] = React.useState('')
     const {
         addMovie,
         setOpenModal
@@ -27,9 +28,12 @@ function MovieForm(){
     }
     const onSubmit = (event) => {
         event.preventDefault();
-        addMovie(newMovieValue, newTypeValue, newProductorValue);
+        addMovie(newMovieValue, newTypeValue, newProductorValue, newLinkValue);
         setOpenModal(false);
     };
+    const onLinkChange = (event) => {
+      setNewLinkValue(event.target.value)
+    }
     return(
         <form onSubmit={onSubmit} >
       <label>Añade algo nuevo</label>
@@ -39,6 +43,7 @@ function MovieForm(){
         value = {newMovieValue}
         onChange = {onChange}
         placeholder = "Sherlock"
+        className='title-input'
         />
       </div>
       <div className='label-container'>
@@ -51,11 +56,19 @@ function MovieForm(){
         </select>
       </div>
       <div className='label-container'>
-        <h2 className='input-text'>Productor:</h2>
+        <h2 className='input-text'>Productor/Autor:</h2>
         <input
         value = {newProductorValue}
         onChange = {onProductorChange}
         placeholder = "HBO"
+        />
+      </div>
+      <div className='label-container'>
+        <h2 className='input-text'>Link de la portada:</h2>
+        <input
+        value = {newLinkValue}
+        onChange = {onLinkChange}
+        placeholder = "www.example.com"
         />
       </div>
       <div className="MovieForm-buttonContainer">

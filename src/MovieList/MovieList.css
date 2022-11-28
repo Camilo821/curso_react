@@ -3,5 +3,21 @@ ul {
     padding: 0 0 56px 0;
     list-style: none;
     font-family: 'Poppins';
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minMax(25%, 1fr));
+  }
+  @media only screen and (max-width: 980px) {
+    ul {
+      grid-template-columns: repeat(3, minMax(33%, 1fr));
+    }
+  }
+  @media only screen and (max-width: 690px) {
+    ul {
+      grid-template-columns: repeat(2, minMax(50%, 1fr));
+    }
+  }
+  @media only screen and (max-width: 470px) {
+    ul {
+      grid-template-columns: repeat(1, minMax(100%, 1fr));
+    }
   }
