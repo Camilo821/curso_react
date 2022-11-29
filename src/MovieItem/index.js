@@ -17,7 +17,7 @@ function MovieItem(props) {
         <li className="MovieItem" style={{backgroundImage: `url(${props.link})`}} >
             <div className="blur">
                 <div className="info-container">
-                    <p className={`MovieItem-p movie-title ${props.completed && 'MovieItem-p--complete'} ${props.link==="" && 'title'}`} >
+                    <p className={`MovieItem-p movie-title ${props.link==="" && 'title'}`} >
                         {props.text}
                     </p>
                     <p className={`MovieItem-p ${props.link==="" && 'type'}`}>
