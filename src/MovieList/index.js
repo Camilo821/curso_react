@@ -1,6 +1,6 @@
-import React from "react";
-import './TodoList.css'
-function TodoList(props){
+import React from "react"
+import './MovieList.css'
+function MovieList(props){
     return(
         <section>
             <ul>
@@ -9,5 +9,4 @@ function TodoList(props){
         </section>
     )
 }
-
-export { TodoList };
+export { MovieList };

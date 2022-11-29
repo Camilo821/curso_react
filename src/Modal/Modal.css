@@ -10,4 +10,5 @@
     align-items: center;
     color: white;
     font-family: 'Poppins';
+    z-index: 3;
   }

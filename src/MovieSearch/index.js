@@ -1,9 +1,9 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
-import './TodoSearch.css'
-function TodoSearch(){
+import { MovieContext } from "../MovieContext";
+import './MovieSearch.css'
+function MovieSearch(){
     
-  const {searchValue, setSearchValue} = React.useContext(TodoContext)
+  const {searchValue, setSearchValue} = React.useContext(MovieContext)
   
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
@@ -12,12 +12,12 @@ function TodoSearch(){
 
   return [
     <input
-      className="TodoSearch"
-      placeholder="Cebolla"
+      className="MovieSearch"
+      placeholder="Game Of Thrones"
       value={searchValue}
       onChange={onSearchValueChange}
     />
   ];
 }
 
-export { TodoSearch };
+export { MovieSearch };

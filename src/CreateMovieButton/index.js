@@ -1,6 +1,6 @@
 import React from "react";
-import './CreateTodoButton.css'
-function CreateTodoButton({openModal, setOpenModal}){
+import './CreateMovieButton.css'
+function CreateMovieButton({openModal, setOpenModal}){
     const onClickButton = () => {
         //Swal.fire(
         //    'Good job!',
@@ -10,13 +10,13 @@ function CreateTodoButton({openModal, setOpenModal}){
         setOpenModal(!openModal)
     };
     return(
-        <button className="CreateTodoButton" onClick={onClickButton}>+</button>
+        <button className="CreateMovieButton" onClick={onClickButton}>+</button>
     )
 }
 
-export { CreateTodoButton };
+export { CreateMovieButton };
 /*
-Swal para el createTodoButton :)
+Swal para el createMovieButton :)
 Swal.fire({
     title: 'Submit your Github username',
     input: 'text',
